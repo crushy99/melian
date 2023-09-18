@@ -14,8 +14,27 @@ export const Lexicon = () => {
                 <div
                     css={entryInnerCss}
                 >
-                    <h1>{entry.name}</h1>
-                    <h4>{entry.secondaryNames}</h4>
+                    <h1
+                        css={nameCss}
+                    >{entry.name}</h1>
+                    <div
+                        css={synonymsCss}
+                    >
+                        <span
+                            css={knownAsCss}
+                        >also known as</span>
+                        <div
+                            css={secondaryNamesCss}
+                        >
+                            {entry.secondaryNames?.map((secondaryName) => {
+                                return <div
+
+                                >
+                                    {secondaryName}
+                                </div>;
+                            })}
+                        </div>
+                    </div>
                     <text>{entry.entry}</text>
                 </div>
             </div>;
@@ -45,4 +64,23 @@ const entryInnerCss = css`
     padding: 24px;
     border-radius: 24px;
     background-color: #cccccc;
+`;
+
+const nameCss = css`
+    margin-bottom: 0;
+`;
+
+const secondaryNamesCss = css`
+    display: flex;
+    flex-direction: column;
+`;
+
+const synonymsCss = css`
+    font-size: 14px;
+    display: flex;
+    gap: 16px;
+`;
+
+const knownAsCss = css`
+    white-space: nowrap;
 `;
