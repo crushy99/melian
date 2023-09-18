@@ -1,9 +1,9 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { App } from './App.tsx'
+import { Lexicon } from './Lexicon.tsx'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+// just started this project and this is already fucked up somehow...
+document.body.style.margin = "-22px 0px 0px 0px";
+
+ReactDOM.createRoot(document.body).render(
+    <Lexicon />
 )
