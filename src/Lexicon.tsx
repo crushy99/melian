@@ -1,7 +1,15 @@
 import { css } from "@emotion/react";
 import { EnglishLexicon } from "../lexicon/EnglishLexicon.ts";
+import {Colors} from "./Colors.ts";
+import {useInterval} from "./useInterval.ts";
+import {useState} from "react";
 
 export const Lexicon = () => {
+    const [counter, setCounter] = useState(0);
+
+    useInterval(() => {
+        setCounter(counter + 1);
+    }, 5000);
 
     return <div
         id={"lexicon-main"}
@@ -14,28 +22,21 @@ export const Lexicon = () => {
                 <div
                     css={entryInnerCss}
                 >
-                    <h1
-                        css={nameCss}
-                    >{entry.name}</h1>
-                    <div
-                        css={synonymsCss}
+                    <header
+                        css={headerCss}
                     >
+                        <h1
+                            css={nameCss}
+                        >{entry.name}
+                        </h1>
                         <span
-                            css={knownAsCss}
-                        >also known as</span>
-                        <div
-                            css={secondaryNamesCss}
+                            css={synonymCss}
                         >
-                            {entry.secondaryNames?.map((secondaryName) => {
-                                return <div
+                            {entry.synonyms ? entry.synonyms[counter % entry.synonyms.length] : null}
+                        </span>
+                    </header>
 
-                                >
-                                    {secondaryName}
-                                </div>;
-                            })}
-                        </div>
-                    </div>
-                    <text>{entry.entry}</text>
+                    <div>{entry.entry}</div>
                 </div>
             </div>;
         })}
@@ -50,7 +51,9 @@ const mainCss = css`
     flex-direction: column;
     gap: 48px;
   
-    background-color: #595959;
+    padding: 36px;
+  
+    background-color: ${Colors.background};
 `;
 
 const entryOuterCss = css`
@@ -61,26 +64,24 @@ const entryOuterCss = css`
 
 const entryInnerCss = css`
     width: 50%;
-    padding: 24px;
-    border-radius: 24px;
-    background-color: #cccccc;
+    max-width: 500px;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: ${Colors.primary};
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+`;
+
+const headerCss = css`
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 8px;
 `;
 
 const nameCss = css`
-    margin-bottom: 0;
+    margin-bottom: 16px;
 `;
 
-const secondaryNamesCss = css`
-    display: flex;
-    flex-direction: column;
-`;
-
-const synonymsCss = css`
-    font-size: 14px;
-    display: flex;
-    gap: 16px;
-`;
-
-const knownAsCss = css`
-    white-space: nowrap;
+const synonymCss = css`
+    font-size: 12px;
 `;
