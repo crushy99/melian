@@ -7,7 +7,7 @@ export type Entry = {
     name: string;
     type: EntryType;
     entry: string;
-    secondaryNames?: string[];
+    synonyms?: string[];
     translations?: string[];
     isFinished?: boolean;
 };
