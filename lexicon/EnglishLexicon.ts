@@ -15,8 +15,22 @@ export const EnglishLexicon: Entry[] = [
     {
         name: "Ankaro",
         type: EntryType.Person,
-        entry: "One of the four wizards who passed the ancient trial. After gaining the red stone of old, Ankaro ventured into the eastern realms of Melian, where he came to power by terrorizing the lands with his dragon steed, which ultimately swallowed him whole and took the wizard's stone as its price.",
-        synonyms: ["Ankaro the Red", "Rider of the Great Dragon", "Eastern Terror"],
+        entry: "One of the four wizards who passed the ancient trial. After gaining the red stone of old, Ankaro split with his brother Oris and ventured into the eastern realms of Melian, where he came to power by terrorizing the lands with his dragon steed, which ultimately swallowed him whole and took the wizard's stone as its price.",
+        synonyms: ["Ankaro the Red", "Rider of the Great Dragon", "Western Terror"],
+        isFinished: false,
+    },
+    {
+        name: "Oris",
+        type: EntryType.Person,
+        entry: "One of the four wizards who passed the ancient trial. He was the holder of the blue stone of old and strode the eastern lands of Melian, but after drifting apart from his borther Ankaro, he was outwitted by someone who took his stone and disguised himself as Oris, so in a sense, his spirit still lives on.",
+        synonyms: ["Oris the Blue", "Wizard of the East", "Water's Friend"],
+        isFinished: false,
+    },
+    {
+        name: "Lonien",
+        type: EntryType.Person,
+        entry: "The greatest and wisest of the four wizards who passed the ancient trial. He holds the green stone of old and used it to persuade the Wadens to follow him.",
+        synonyms: ["Lonien the Green", "Lonien the Wise", "Nature's Friend"],
         isFinished: false,
     }
 ];
