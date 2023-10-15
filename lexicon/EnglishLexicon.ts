@@ -166,5 +166,42 @@ export const EnglishLexicon: Entry[] = [
         entry: "The father of Kela Ludin-Eci and the main lieutenant of Logen's eastern farmsteads owned by the Ludin-Ecis.",
         books: [Book.Teln],
         isFinished: false,
+    },
+    {
+        name: "Logen",
+        type: EntryType.Place,
+        entry: "A smaller country in the south of Melian. It lies south of its' so-called big brother Arlia and to the south east of the melad-meha. Besides the mountainous country side shared with Gominas, which lies west of Logen, it is a relatively flat kingdom between the aforementioned sunny mountains and the imbreachable southern woods. During a time, Logen had a monopoly over the control of the Waden people.",
+        books: [Book.Teln],
+        isFinished: false,
+    },
+    {
+        name: "Ganliath",
+        type: EntryType.Place,
+        entry: "A tiny kingdom which lies between Logen and the southern woods. To the north and west its border to Logen is the Fabecas river, which was its primeval defense in former times, before both country's leaders decided it was best to exchange information, goods and live in peace.",
+        isFinished: false,
+    },
+    {
+        name: "Fabecas",
+        type: EntryType.Place,
+        entry: "A great river with its source in the middle of the melad-meha. Its journey leads through Gominas and for the most part it lies very close to the border of the southern woods, leading some people to wonder, if the strange trees and this particular river have something in common.",
+        isFinished: false,
+    },
+    {
+        name: "Cesa",
+        type: EntryType.Place,
+        entry: "A former fortress used by the king of Logen to siege the lands of Ganliath. In more recent times, it is an important stop for travelers to Ganliath, as it lies directly next to the bridge of Cesa, the most important trade route over the Fabecas river.",
+        isFinished: false,
+    },
+    {
+        name: "Bailis",
+        type: EntryType.Place,
+        entry: "Built only a few years after Cesa, Bailis also used to serve as a fortress, of which only the structure now lives on - the spirit has changed a lot and the fortress turned into a sprawling city, blossoming with trade over both road and river.",
+        isFinished: false,
+    },
+    {
+        name: "Hiemas",
+        type: EntryType.Place,
+        entry: "The main city on the route from and to Ganliath. Many travelers make a stop here to rest or to see what news the day may bring.",
+        isFinished: false,
     }
 ];
