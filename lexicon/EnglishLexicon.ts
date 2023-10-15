@@ -201,7 +201,75 @@ export const EnglishLexicon: Entry[] = [
     {
         name: "Hiemas",
         type: EntryType.Place,
-        entry: "The main city on the route from and to Ganliath. Many travelers make a stop here to rest or to see what news the day may bring.",
+        entry: "The main city on the route from and to Ganliath. Many travelers make a stop here to rest or to see what news the day may bring. The city only grew to be what it is thanks to its location, being the crossroads of the north-south road from Cesa to Lamoel and the west-east road from Welenia to Bailis.",
+        isFinished: false,
+    },
+    {
+        name: "Lamoel",
+        synonyms: ["Pearl of Logen"],
+        type: EntryType.Place,
+        entry: "A great harbor city in the center of Logen. It is the second biggest city in Logen overall and is passed by many ships sailing the Teulenen river. Another advantage this city has is its connection to the old eastern road, which passes right through it.",
+        isFinished: false,
+    },
+    {
+        name: "Old Eastern Road",
+        type: EntryType.Place,
+        entry: "An ancient road connecting the western shores of Melian with the eastern regions. The begins slightly south of the melad-meha, leads through Gominas and through Logen and then ends in the most eastern parts of Arlia, specifically in Enavea, a great port city.",
+        isFinished: false,
+    },
+    {
+        name: "Teulenen",
+        type: EntryType.Place,
+        entry: "A great river with its source in the king's hill in Logen. Shortly after beginning as a small water, three rivers from the melad-meha join the Teulenen, strengthening it and making it capable of carrying ships.",
+        isFinished: false,
+    },
+    {
+        name: "Fewele",
+        type: EntryType.Place,
+        entry: "Logen's most important city in the east. It is passed by the old eastern road and many travellers stop here for rest.",
+        isFinished: false,
+    },
+    {
+        name: "Welenia",
+        type: EntryType.Place,
+        entry: "A relatively large city in Logen close to the capitol. It lies on the main road from the capitol to Ganliath, so many people pass it every day. Whoever was in charge of Welenia always had good relations with the king, growing the city from a peasantly village to one of the kingdom's most important assets.",
+        isFinished: false,
+    },
+    {
+        name: "Uemasil",
+        type: EntryType.Place,
+        entry: "One of the three rivers flowing into the Teulenen. Its source is in the center-south of the melad-meha.",
+        isFinished: true,
+    },
+    {
+        name: "Doinol",
+        type: EntryType.Place,
+        entry: "One of the three rivers flowing into the Teulenen. Its source lies in the eastern melad-meha.",
+        isFinished: true,
+    },
+    {
+        name: "Cavonie",
+        type: EntryType.Place,
+        entry: "The largest of the three rivers flowing into the Teulenen. Beginning in the uppermost north-east of the melad-meha, its water passes the lands of Gominas until it eventually winds into the Teulenen in the norht of Logen.",
+        isFinished: true,
+    },
+    {
+        name: "Hayes Brem",
+        synonyms: ["Logen's Star", "Glimmer of Hope"],
+        type: EntryType.Place,
+        entry: "A large fortress city which was reinforced over time, becoming the main stronghold of defense against aggression from the western neighbor Gominas.",
+        isFinished: false,
+    },
+    {
+        name: "Lohase",
+        type: EntryType.Place,
+        entry: "One of the twin fortresses built in the west of Logen to defend itself from Gominas.",
+        isFinished: false,
+    },
+    {
+        name: "Vanis",
+        type: EntryType.Place,
+        entry: "Aside from the capitol and Hayes Brem, this city was the chief defense against Gominas in times of war. After peace was settled, this city, ruined by war, was rebuilt (with another purpose in mind) and it started to blossom in the summer of quietness.",
         isFinished: false,
     }
 ];
