@@ -1,4 +1,4 @@
-import { css } from "@emotion/react";
+import {css} from "@emotion/react";
 import { EnglishLexicon } from "../lexicon/EnglishLexicon.ts";
 import {Colors} from "./Colors.ts";
 import {useInterval} from "./useInterval.ts";
@@ -15,28 +15,32 @@ export const Lexicon = () => {
         id={"lexicon-main"}
         css={mainCss}
     >
-        {EnglishLexicon.map((entry) => {
+        {EnglishLexicon.map((entry, index) => {
+            const styles = getStyles(index);
             return <div
-                css={entryOuterCss}
+                css={styles.entryOuter}
             >
                 <div
-                    css={entryInnerCss}
+                    css={styles.entryInner}
                 >
                     <header
-                        css={headerCss}
+                        css={styles.header}
                     >
                         <h1
-                            css={nameCss}
-                        >{entry.name}
+                            css={styles.name}
+                        >
+                            {entry.name}
                         </h1>
                         <span
-                            css={synonymCss}
+                            css={styles.synonym}
                         >
                             {entry.synonyms ? entry.synonyms[counter % entry.synonyms.length] : null}
                         </span>
                     </header>
 
-                    <div>{entry.entry}</div>
+                    <div
+                        css={styles.entry}
+                    >{entry.entry}</div>
                 </div>
             </div>;
         })}
@@ -49,39 +53,42 @@ const mainCss = css`
   
     display: flex;
     flex-direction: column;
-    gap: 48px;
-  
-    padding: 36px;
   
     background-color: ${Colors.background};
 `;
 
-const entryOuterCss = css`
-    display: flex;
-    justify-content: center;
-    width: 100%;
-`;
-
-const entryInnerCss = css`
-    width: 50%;
-    max-width: 500px;
-    padding: 16px;
-    border-radius: 16px;
-    background-color: ${Colors.primary};
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-`;
-
-const headerCss = css`
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    gap: 8px;
-`;
-
-const nameCss = css`
-    margin-bottom: 16px;
-`;
-
-const synonymCss = css`
-    font-size: 12px;
-`;
+const getStyles = (index: number) => {
+    return {
+        entryOuter: css`
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            min-height: 100vh;
+        `,
+        entryInner: css`
+            display: flex;
+            width: 100%;
+        `,
+        header: css`
+            width: 50%;
+            padding: 32px;
+            color: ${index % 2 ? Colors.primary : "black"};
+            background-color: ${index % 2 ? "transparent" : Colors.primary};
+        `,
+        name: css`
+            margin: 0;
+            font-size: 7.5em;
+        `,
+        synonym: css`
+            color: ${index % 2 ? Colors.primary : "black"};
+            font-size: 2em;
+        `,
+        entry: css`
+            background-color: ${index % 2 ? Colors.primary : "transparent"};
+            width: 50%;
+            font-size: 2.5em;
+            padding: 32px;
+            color: ${index % 2 ? "black" : Colors.primary};
+        `,
+    }
+};
