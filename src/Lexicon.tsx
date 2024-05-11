@@ -71,7 +71,7 @@ const getStyles = (index: number) => {
         `,
         header: css`
             width: 50%;
-            padding: 32px;
+            padding: 64px;
             color: ${index % 2 ? Colors.primary : "black"};
             background-color: ${index % 2 ? "transparent" : Colors.primary};
         `,
@@ -87,7 +87,7 @@ const getStyles = (index: number) => {
             background-color: ${index % 2 ? Colors.primary : "transparent"};
             width: 50%;
             font-size: 2.5em;
-            padding: 32px;
+            padding: 64px;
             color: ${index % 2 ? "black" : Colors.primary};
         `,
     }

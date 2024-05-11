@@ -332,6 +332,7 @@ export const EnglishLexicon: Entry[] = [
         type: EntryType.Person,
         entry: "Grandfather of Mart and Lent",
         children: ["Nado Ganued", "Litai Ganued", "Calen Ganued", "Nala Ganued", "Iuna Ganued"],
+        parents: ["Zinda Ganued", "Gajdo Ganued"],
         partner: "Mada Ganued",
         isFinished: false,
     },
